@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=page %>
+    </title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+
+    <% const title="Hello world in express.js + ejs in bosh sahifa" %>
+        <% let users=[{name : "ogabek" , id : 1}, {name : "binali" , id : 2}, {name : "shamsiddin" , id : 3}] %>
+
+            <h1>
+                <%=title %>
+            </h1>
+            <main>
+                <section>
+                    <ul style="list-style: none;">
+                        <% users.map(user=> { %>
+                            <li>
+                                <h3>
+                                    <%=user.name %>
+                                </h3>
+                            </li>
+                            <% }) %>
+                    </ul>
+                </section>
+            </main>
+
+            <script src="/js/index.js"></script>
+</body>
+
+</html>
